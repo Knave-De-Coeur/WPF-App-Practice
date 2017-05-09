@@ -26,5 +26,16 @@ namespace VisualProperties
 
             txtOutput.Text = "I'm learning how to code in C#!";
         }
+
+        private void btnClickMe_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+
+            string name = btn.Name;
+            string type = btn.GetType().ToString();
+            string label = btn.Content.ToString();
+
+            txtOutput.Text = "You clicked a " + type + "name" + name;
+        }
     }
 }
